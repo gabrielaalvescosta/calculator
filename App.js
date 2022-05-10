@@ -30,7 +30,7 @@ export default class App extends Component {
           <Button label="2" />
           <Button label="3" />
           <Button label="+" />
-          <Button label="0" />
+          <Button label="0" double />
           <Button label="." />
           <Button label="=" />
         </View>
