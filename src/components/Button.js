@@ -1,7 +1,6 @@
 import React from 'react';
 import {
     StyleSheet,
-    Button,
     Text,
     Dimensions,
     TouchableHighlight
@@ -19,9 +18,9 @@ export default props => {
 
 const style = StyleSheet.create({
     Button: {
-        fontSize: 30,
-        height: Dimensions.get('windows').width / 4,
-        width: Dimensions.get('windows').width / 4,
+        fontSize: 20,
+        height: Dimensions.get('window').width / 4,
+        width: Dimensions.get('window').width / 4,
         padding: 20,
         backgroundColor: '#f3f3f3',
         borderWidth: 1,
