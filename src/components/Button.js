@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
 
 export default props => {
 
-    const stylesButton = [styles.button]
+    const stylesButton = [styles.Button]
 
     if (props.double) {
         stylesButton.push(styles.buttonDouble);
@@ -46,6 +46,18 @@ export default props => {
     if (props.operation) {
         stylesButton.push(styles.operationButton);
     }
+
+    // calculator functions
+
+    const addDigit = n => {
+        this.setState({ displayValue: n })
+    }
+
+    const clearMemory = () => {
+        this.setState({ displayValue: '0'})
+    }
+
+    const setOperation = operation => {}
 
     return (
         <TouchableHighlight onPress={props.onClick}>

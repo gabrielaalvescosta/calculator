@@ -5,8 +5,9 @@ import Display from './src/components/Display';
 
 export default class App extends Component {
   
+  // criando um estado inicial para o componente display
   state = {
-    displayValue: 0,
+    displayValue: '0',
   };
 
   render() {
@@ -15,7 +16,7 @@ export default class App extends Component {
         <Text>Olá</Text>
         <Display value={this.state.DisplayValue} />
         <View style={styles.buttons}>
-          <Button label="AC" />
+          <Button label="AC" triple onClick={this.clearMemory}/>
           <Button label="/" />
           <Button label="7" />
           <Button label="8" />
