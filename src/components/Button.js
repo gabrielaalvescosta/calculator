@@ -57,7 +57,7 @@ export default props => {
         this.setState({ displayValue: '0'})
     }
 
-    const setOperation = operation => {}
+    const setOperation = operation => ({ displayValue: operation })
 
     return (
         <TouchableHighlight onPress={props.onClick}>

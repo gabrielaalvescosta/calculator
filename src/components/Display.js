@@ -4,9 +4,9 @@ import { Text, View, StyleSheet } from 'react-native';
 
 export default props => {
     return (
-        <View style={styles.displayValue}>
+        <View style={styles.display}>
             <Text style={styles.displayValue} numberOfLines={1}>
-                {props.value}
+                {props.displayValue}
             </Text>
         </View>
     )
@@ -16,9 +16,9 @@ export default props => {
 const styles = StyleSheet.create({
     display: {
         flex: 1,
-        padding: 2,
+        padding: 20,
         justifyContent: 'center',
-        backgroundColor: '#f89999',
+        backgroundColor: '#999',
         alignItems: 'flex-end'
     },
     displayValue: {
