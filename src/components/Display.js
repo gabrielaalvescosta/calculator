@@ -1,28 +1,30 @@
 import React from 'react';
-import { Text, View, StyleSheet } from 'react-native';
-
-
-export default props => {
-    return (
-        <View style={styles.display}>
-            <Text style={styles.displayValue} numberOfLines={1}>
-                {props.displayValue}
-            </Text>
-        </View>
-    )
-}
-
+import {
+    StyleSheet,
+    Text,
+    View
+} from 'react-native';
 
 const styles = StyleSheet.create({
     display: {
-        flex: 1,
-        padding: 20,
+        padding: 30,
+        color: '#fff',
         justifyContent: 'center',
-        backgroundColor: '#999',
+        backgroundColor: 'rgba(0,0,0,0.6)',
         alignItems: 'flex-end'
     },
-    displayValue: {
+    valueDisplay: {
         fontSize: 60,
         color: '#fff'
     }
 })
+
+export default props => {
+
+    return (
+        <View style={styles.display}>
+            <Text style={styles.valueDisplay}>{props.value}</Text>
+        </View>
+    )
+
+}

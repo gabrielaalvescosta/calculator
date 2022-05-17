@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         backgroundColor: '#f3f3f3',
         borderWidth: 1,
-        borderColor: '#888'
+        borderColor: '#888',
     },
     operationButton: {
         color: '#666',
@@ -35,32 +35,13 @@ export default props => {
 
     const stylesButton = [styles.Button]
 
-    if (props.double) {
-        stylesButton.push(styles.buttonDouble);
-    } 
+    if (props.double) stylesButton.push(styles.buttonDouble);
+    if (props.triple) stylesButton.push(styles.buttonTriple);
+    if (props.operation) stylesButton.push(styles.operationButton);
 
-    if (props.triple) {
-        stylesButton.push(styles.buttonTriple);
-    }
-
-    if (props.operation) {
-        stylesButton.push(styles.operationButton);
-    }
-
-    // calculator functions
-
-    const addDigit = n => {
-        this.setState({ displayValue: n })
-    }
-
-    const clearMemory = () => {
-        this.setState({ displayValue: '0'})
-    }
-
-    const setOperation = operation => ({ displayValue: operation })
 
     return (
-        <TouchableHighlight onPress={props.onClick}>
+        <TouchableHighlight onPress={() => props.onClick(props.label)}>
             <Text style={stylesButton}>{props.label}</Text>
         </TouchableHighlight>
     )
